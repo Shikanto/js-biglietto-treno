@@ -1,10 +1,26 @@
 const anniViaggiatore = prompt ("Benvenuto! Puoi scrivere gentilmente la tua età?");
-const kilometriViaggio = prompt ("Perfetto! Quanti km dovrai percorrere?");
+
+
+if (isNaN(anniViaggiatore)){
+    alert('Il valore inserito non è numerico');
+} else {
+    alert('Perfetto! Grazie!');
+}
+
+let kilometriViaggio = prompt ("Perfetto! Quanti km dovrai percorrere?");
+kilometriViaggio = kilometriViaggio.replace(",",".")
+
+if (isNaN(kilometriViaggio)){
+    alert('Il valore inserito non è numerico');
+} else {
+    alert('Perfetto! Grazie!');
+}
+
 let prezzoBiglietto = kilometriViaggio * 0.21;
 let scontoGiovani = (prezzoBiglietto * 20) / 100;
 let scontoAnziani = (prezzoBiglietto * 40) / 100;
-let prezzoScontatoGiovani = Math.round((prezzoBiglietto - scontoGiovani) * 100) / 100
-let prezzoScontatoAnziani = Math.round((prezzoBiglietto - scontoAnziani) * 100) / 100
+let prezzoScontatoGiovani = Math.round((prezzoBiglietto - scontoGiovani) * 100) / 100;
+let prezzoScontatoAnziani = Math.round((prezzoBiglietto - scontoAnziani) * 100) / 100;
 
 if (anniViaggiatore < 18) {
     alert("Il prezzo del biglietto è " + prezzoBiglietto + "€ ma siccome sei minorenne hai diritto al 20% di sconto, quindi devi pagare solo " + prezzoScontatoGiovani + "€")
