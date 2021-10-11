@@ -1,5 +1,5 @@
-let anniViaggiatore = prompt ("Benvenuto! Puoi scrivere gentilmente la tua età?");
-let kilometriViaggio = prompt ("Perfetto! Quanti km dovrai percorrere?");
+const anniViaggiatore = prompt ("Benvenuto! Puoi scrivere gentilmente la tua età?");
+const kilometriViaggio = prompt ("Perfetto! Quanti km dovrai percorrere?");
 let prezzoBiglietto = kilometriViaggio * 0.21;
 let scontoGiovani = (prezzoBiglietto * 20) / 100;
 let scontoAnziani = (prezzoBiglietto * 40) / 100;
